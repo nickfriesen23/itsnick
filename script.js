@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Array of interests to cycle through
     const interests = [
-        'Photography',
-        'Coffee',
-        'GPUs',
-        'interesting people',
-        'smoking meat',
-        'playing piano',
-        'playing guitar',
-        'good house music',
-        'Machine Learning',
-        'AI',
-        'Welding'
+        'Photography.',
+        'AI.',
+        'Machine Learning.',
+        'Piano.',
+        'Guitar.',
+        'Dance Music.',
+        'Coffee.',
+        'GPUs.',
+        'interesting people.',
+        'smoking meat.',
+        'Welding.'
     ];
 
     const changingText = document.getElementById('changing-text');
@@ -79,5 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         sectionObserver.observe(section);
+    });
+
+    // Add hover effect for nav cards
+    document.querySelectorAll('.nav-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
     });
 });
