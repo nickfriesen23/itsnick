@@ -60,7 +60,7 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     max-width: 1000px;
-    margin: 2rem auto;
+    margin: 3rem auto; /* Increased margin top and bottom */
     padding: 0 1rem;
 }
 
@@ -155,7 +155,7 @@ h3 {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: calc(var(--spacing-lg) * 1.5); /* Increased bottom margin */
     padding: 0 1rem;
 }
 
@@ -484,13 +484,19 @@ footer::before {
     }
 
     .nav-cards {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        padding: 0 0.5rem;
+        grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+        gap: 0.75rem;
+        padding: 0 0.75rem;
+        margin: 2rem auto;
     }
 
     .nav-card {
-        padding: 1rem;
+        padding: 0.75rem;
         font-size: 0.9rem;
+        min-height: 60px; /* Ensure consistent height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .footer-content {
