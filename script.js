@@ -11,7 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'GPUs.',
         'interesting people.',
         'smoking meat.',
-        'Welding.'
+        'Welding.',
+        'Chopin.',
+        'Sparkling Water.',
+        'Jesus.',
+        'facial expressions.',
+        'the blues.',
+        'warmly lit spaces.'
     ];
 
     const changingText = document.getElementById('changing-text');
