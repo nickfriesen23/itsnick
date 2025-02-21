@@ -60,8 +60,9 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     max-width: 1000px;
-    margin: 3rem auto; /* Increased margin top and bottom */
+    margin: 3rem auto;
     padding: 0 1rem;
+    margin-top: 45vh; /* Push cards down further */
 }
 
 .nav-card {
@@ -105,7 +106,7 @@ h3 {
 .hero {
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Changed from center to flex-start */
     justify-content: center;
     text-align: center;
     padding: var(--spacing-lg);
@@ -149,20 +150,21 @@ h3 {
     position: relative;
     z-index: 1;
     padding: 2rem;
+    padding-top: 25vh; /* Push content down from the top */
 }
 
 .dynamic-text-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: calc(var(--spacing-lg) * 1.5); /* Increased bottom margin */
+    margin-bottom: calc(var(--spacing-lg) * 1.5);
     padding: 0 1rem;
 }
 
 .dynamic-text {
     font-size: 2rem;
     color: var(--text-gray);
-    min-height: 2.4em;
+    height: 2.4em; /* Changed from min-height to fixed height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -467,6 +469,10 @@ footer::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-content {
+        padding-top: 35vh; /* Push content even further down on mobile */
+    }
+
     h1 {
         font-size: 3rem;
     }
@@ -484,16 +490,16 @@ footer::before {
     }
 
     .nav-cards {
-        grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+        margin-top: 25vh; /* Adjust cards position on mobile */
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
         padding: 0 0.75rem;
-        margin: 2rem auto;
     }
 
     .nav-card {
         padding: 0.75rem;
         font-size: 0.9rem;
-        min-height: 60px; /* Ensure consistent height */
+        height: 60px; /* Fixed height instead of min-height */
         display: flex;
         align-items: center;
         justify-content: center;
